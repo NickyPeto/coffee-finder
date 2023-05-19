@@ -1,0 +1,7 @@
+.footer_container {
+  font-family: sans-serif;
+  background-color: rgb(203, 203, 247);
+  display: flex;
+  justify-content: last baseline;
+  width: 100%;
+}
