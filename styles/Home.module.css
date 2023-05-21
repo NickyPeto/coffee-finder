@@ -5,3 +5,12 @@
   min-height: 100vh;
   font-family: sans-serif;
 }
+
+.heading {
+  /*Change units to make it consistent*/
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  color: var(--text-white-100);
+}
