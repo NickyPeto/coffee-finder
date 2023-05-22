@@ -1,9 +1,11 @@
-import styles from "../../../styles/Banner.module.css";
 import Image from "next/image";
+
+import styles from "../../../styles/Banner.module.css";
 import bgCoffeeFinder from "../../../public/static/bg-coffee-finder.png";
+import { BannerProps } from "../../../types/types";
 
 // TODO: type this
-export default function Banner(props: any) {
+export default function Banner(props: BannerProps) {
   return (
     <div className={styles.container}>
       <div className={styles.image_wrapper}>
@@ -22,7 +24,7 @@ export default function Banner(props: any) {
         <div className={styles.column}>
           <p className={styles.subTitle}>Discover your local coffee stores!</p>
           <div className={styles.buttonWrapper}>
-            <button className={styles.button} onClick={props.handleOnClick}>
+            <button className={styles.button} onClick={props.handleClick}>
               {props.buttonText}
             </button>
           </div>

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
-import data from "../../data/coffee-stores.json";
 import Link from "next/link";
-import Card from "@/app/components/card";
-import styles from "../../styles/coffee-store.module.css";
+import { useRouter } from "next/router";
 import Image from "next/image";
-import { CoffeeStoreProps, CoffeeStores } from "../../types/types";
+
+import data from "../../data/coffee-stores.json";
+import styles from "../../styles/coffee-store.module.css";
+import { CoffeeStoreProps } from "../../types/types";
 
 export function getStaticProps(staticProps: any) {
   const params = staticProps.params;
@@ -42,7 +42,6 @@ export default function Coffee({ coffeeStore }: CoffeeStoreProps) {
 
   const { name, id, address, neighbourhood, websiteUrl, imgUrl } = coffeeStore;
 
-  console.log(coffeeStore);
   return (
     <div className={styles.container}>
       <Head>

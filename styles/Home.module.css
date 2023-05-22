@@ -6,6 +6,17 @@
   font-family: sans-serif;
 }
 
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.card {
+  margin: 8px;
+}
+
 .heading {
   /*Change units to make it consistent*/
   font-size: 2.5rem;
@@ -13,4 +24,19 @@
   padding-bottom: 2.5rem;
   margin-top: 2.5rem;
   color: var(--text-white-100);
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: center
+  }
+
+  .heading {
+    text-align: center;
+  }
+  .cardsContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

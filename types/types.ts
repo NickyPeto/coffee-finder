@@ -7,6 +7,11 @@ export type CoffeeStores = {
   neighbourhood: string;
 };
 
+export type BannerProps = {
+  buttonText: string;
+  handleClick: () => void;
+};
+
 export interface CoffeeStoreProps {
   coffeeStore: CoffeeStores;
 }

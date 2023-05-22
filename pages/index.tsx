@@ -27,24 +27,26 @@ export default function Home(props: any) {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <Banner buttonText="View stores nearby" handleOnClick={handleClick} />
+          <Banner buttonText="View stores nearby" handleClick={handleClick} />
         </main>
         <h2 className={styles.heading}>Stores</h2>
-        {props.coffeeStores.length > 0 ? (
-          props.coffeeStores.map((cafe: any) => (
-            <div key={cafe.id}>
-              <Card
-                name={cafe.name}
-                websiteUrl={`/coffee-store/${cafe.id}`}
-                address={cafe.adress}
-                neighbourhood={cafe.neighbourhood}
-                imgUrl={cafe.imgUrl}
-              />
-            </div>
-          ))
-        ) : (
-          <></>
-        )}
+        <div className={styles.cardsContainer}>
+          {props.coffeeStores.length > 0 ? (
+            props.coffeeStores.map((cafe: any) => (
+              <div className={styles.card} key={cafe.id}>
+                <Card
+                  name={cafe.name}
+                  websiteUrl={`/coffee-store/${cafe.id}`}
+                  address={cafe.adress}
+                  neighbourhood={cafe.neighbourhood}
+                  imgUrl={cafe.imgUrl}
+                />
+              </div>
+            ))
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </>
   );
