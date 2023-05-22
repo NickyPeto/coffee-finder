@@ -35,8 +35,8 @@ export default function Home(props: any) {
             <div key={cafe.id}>
               <Card
                 name={cafe.name}
-                link={`/coffee-store/${cafe.id}`}
-                adress={cafe.adress}
+                websiteUrl={`/coffee-store/${cafe.id}`}
+                address={cafe.adress}
                 neighbourhood={cafe.neighbourhood}
                 imgUrl={cafe.imgUrl}
               />

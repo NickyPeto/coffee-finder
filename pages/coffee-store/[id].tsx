@@ -5,6 +5,7 @@ import Link from "next/link";
 import Card from "@/app/components/card";
 import styles from "../../styles/coffee-store.module.css";
 import Image from "next/image";
+import { CoffeeStoreProps, CoffeeStores } from "../../types/types";
 
 export function getStaticProps(staticProps: any) {
   const params = staticProps.params;
@@ -32,16 +33,16 @@ export function getStaticPaths() {
   };
 }
 
-export default function Coffee(props: any) {
+export default function Coffee({ coffeeStore }: CoffeeStoreProps) {
   const router = useRouter();
 
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
 
-  const { name, id, address, neighbourhood, websiteUrl, imgUrl } =
-    props.coffeeStore;
+  const { name, id, address, neighbourhood, websiteUrl, imgUrl } = coffeeStore;
 
+  console.log(coffeeStore);
   return (
     <div className={styles.container}>
       <Head>
